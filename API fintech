@@ -1,0 +1,587 @@
+{
+
+	"item": [
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "API availability with auth",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "..",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "9f96fec05df414da5d35e508b7eed7de",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https:/../v1/check",
+							"protocol": "https",
+							"host": [
+								"business",
+								"selfwork",
+								"ru"
+							],
+							"path": [
+								"selfemployed",
+								"business",
+								"v1",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API availability",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "..",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "9f96fec05df414da5d35e508b7eed7de",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://.../ping",
+							"protocol": "https",
+							"host": [
+								"..",
+								"..",
+								"ru"
+							],
+							"path": [
+								"..",
+								"..",
+								"ping"
+							],
+							"query": [
+								{
+									"key": "X-Login",
+									"value": "..",
+									"disabled": true
+								},
+								{
+									"key": "X-Password",
+									"value": "9f96fec05df414da5d35e508b7eed7de",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "version check",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Password",
+								"value": "9f96fec05df414da5d35e508b7eed7de",
+								"type": "text"
+							},
+							{
+								"key": "X-Login",
+								"value": "..",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://..,version",
+							"protocol": "https",
+							"host": [
+								"..",
+								"..",
+								"ru"
+							],
+							"path": [
+								"..",
+								"..",
+								"version"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "selfemployed",
+			"item": [
+				{
+					"name": "check status in wallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "..",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n118082\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+						
+					},
+					"response": []
+				},
+				{
+					"name": "add selfemployed list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "..",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"firstName\": \"Имя\",\n    \"lastName\": \"Фамилия\",\n    \"middleName\": \"Отчество\",\n    \"birthDate\": \"1994-01-01\",\n    \"gender\": \"M\",\n    \"inn\": 123456789012,\n    \"phone\": \"+79999999999\",\n    \"actionName\": \"клинер\",\n    \"comment\": \"string\",\n    \"autoPayTax\": true\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://.../v1/self-employed/add-list",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"...",
+								"...",
+								"v1",
+								"self-employed",
+								"add-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check state",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://.../v1/self-employed/check-state/118082",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"...",
+								"...",
+								"v1",
+								"self-employed",
+								"check-state",
+								"111111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find selfemployed by id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[99456]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https:/.../v1/self-employed/find-by-id",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"...",
+								"...",
+								"v1",
+								"self-employed",
+								"find-by-id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payout",
+			"item": [
+				{
+					"name": "payout add",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							},
+							{
+								"key": "payoutRegistries",
+								"value": "payoutRegistries",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"comment\": \"Тестовая выплата с подписанным договором\",\n  \"payouts\": [\n    {\n      \"state\": 0,\n      \"idIndividual\": 99456,\n      \"sum\": 10000,\n      \"comment\": \"Тестовая выплата с подписанным договором\"\n    }\n ],\n  \"needDoc\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ".../v1/payouts/add",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"selfemployed",
+								"business",
+								"v1",
+								"payouts",
+								"add"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "9f96fec05df414da5d35e508b7eed7de",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payout info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Id",
+								"value": "130687",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https:/.../v1/payouts/info-by-id/131224",
+							"protocol": "https",
+							"host": [
+								"business",
+								"selfwork",
+								"ru"
+							],
+							"path": [
+								"selfemployed",
+								"business",
+								"v1",
+								"payouts",
+								"info-by-id",
+								"131224"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registry payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[132429\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://...v1/payouts/registry-payment",
+							"protocol": "https",
+							"host": [
+								"business",
+								"selfwork",
+								"ru"
+							],
+							"path": [
+								"selfemployed",
+								"business",
+								"v1",
+								"payouts",
+								"registry-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payout info by individuals",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n118082\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://.../v1/payouts/info-by-individuals",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"...",
+								"...",
+								"v1",
+								"payouts",
+								"info-by-individuals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payout check",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[132429]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://...v1/payouts/check",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"..",
+								"..",
+								"v1",
+								"payouts",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contracts list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Login",
+								"value": "...",
+								"type": "text"
+							},
+							{
+								"key": "X-Password",
+								"value": "cd8d98ea83387e8fd841f46e98afc8e8 ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": ".../v1/documents/get-docs/99456/contracts",
+							"protocol": "https",
+							"host": [
+								"...",
+								"...",
+								"ru"
+							],
+							"path": [
+								"...",
+								"...",
+								"v1",
+								"documents",
+								"get-docs",
+								"99456",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	
+	]
+}
